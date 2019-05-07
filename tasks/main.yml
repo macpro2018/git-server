@@ -1,0 +1,11 @@
+---
+- name: Ensure git is installed
+  apt:
+    name: "{{ git_packages }}"
+    state: present
+  when:
+    - not git_install_from_source
+    - ansible_distribution == 'Ubuntu'
+
+- import_tasks: install-from-source.yml
+  when: git_install_from_source

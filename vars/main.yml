@@ -1,0 +1,12 @@
+---
+packages:
+     - "git"
+     - "nmap"
+username:
+     - "git"
+hostname:
+     - "gitserver"
+git_base_dir:
+     - "/home/git"
+project:
+     - "new-project"
